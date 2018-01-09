@@ -1,0 +1,12 @@
+# docker-compose.yml for the STI NOC
+#
+
+version: "3.3"
+services:
+  prober:
+    image: prom/blackbox-exporter
+    volumes:
+      - "./prober:/config"
+    ports:
+      - "9115:9115"
+    command: --config.file=/config/blackbox.yml
