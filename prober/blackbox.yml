@@ -1,0 +1,17 @@
+modules:
+  https_get:
+    prober: http
+    timeout: 5s
+    http:
+      valid_status_codes: []  # Defaults to 2xx
+      method: GET
+      no_follow_redirects: true
+      fail_if_not_ssl: true
+  https_get_slow:
+    prober: http
+    timeout: 240s
+    http:
+      valid_status_codes: []  # Defaults to 2xx
+      method: GET
+      no_follow_redirects: true
+      fail_if_not_ssl: true
