@@ -10,3 +10,4 @@ services:
     ports:
       - "9115:9115"
     command: --config.file=/config/blackbox.yml
+    restart: unless-stopped
